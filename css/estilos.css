@@ -7,7 +7,7 @@ body, html {
 }
 
 main {
-    padding-top: 1%; /* Altura del header */
+    padding-top: 80px; /* Altura del header */
     padding-bottom: 60px; /* Altura del footer */
 }
 
@@ -15,7 +15,7 @@ main {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    overflow: auto;
+    overflow: hidden;
     padding: var(--padding-container);
 }
 
@@ -26,14 +26,14 @@ main {
     align-items: center;
     justify-content: space-between;
     
-    border-radius: 100px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px 20px 20px 20px;
-    margin: 20px 20px 20px 20px;
+    padding: 40px 40px 40px 40px;
+    margin: 40px 40px 40px 40px;
 }
 .image portada {
     width: 100%;
-    height: 100%;
+    height: 80%;
     border-radius: 10px;
     
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -72,7 +72,7 @@ main {
     width: 100%;
     height: 100vh;
     min-height: 600px;
-    max-height: 100px;
+    max-height: 800px;
     position: relative;
     display: grid;
     grid-template-rows: 100px 1fr;
