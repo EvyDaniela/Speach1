@@ -7,7 +7,7 @@ body, html {
 }
 
 main {
-    padding-top: 1px; /* Altura del header */
+    padding-top: 1%; /* Altura del header */
     padding-bottom: 60px; /* Altura del footer */
 }
 
