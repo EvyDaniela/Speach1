@@ -107,7 +107,7 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 300px;
     text-align: center;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #c72323;
     position: fixed;
     top: 50%; /* Posiciona el contenedor en la mitad de la página verticalmente */
     left: 20px; /* Ajusta la posición hacia la izquierda */
