@@ -14,7 +14,7 @@ main {
 .container {
     width: 90%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 90;
     overflow: hidden;
     padding: var(--padding-container);
 }
