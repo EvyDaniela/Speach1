@@ -223,7 +223,7 @@ oyCrosswordMenu.prototype.installDoneMenu = function(){
 	var target = document.getElementById("oygPuzzleFooter");
 	target.innerHTML = "";
 
-    /*//Aquí es para la puntuación
+   
 	this.addNoneWordAction(target, "Juego Terminado!");	 
 	this.addNewLine(target);
 	var msg = "Tienes <b>" + this.score + "</b> puntos";
@@ -234,7 +234,7 @@ oyCrosswordMenu.prototype.installDoneMenu = function(){
 	
 	this.addNoneWordAction(target, msg);	  
 	this.addNewLine(target); 
-	*/
+	
 	var oThis = this;
 	this.addSubmitLeaveMenuItems(target);
 	    
@@ -243,13 +243,13 @@ oyCrosswordMenu.prototype.installDoneMenu = function(){
 	this.server.trackAction(this.puzz.uid, "fin");
 	
 	this.footer.update();
-    /*
+    
     var mensaje = "Int&eacute;ntalo de nuevo. ";
     if(this.matches == this.clues.length){
         mensaje = "Muy bien! ";
     }
     retroalimentar("<b>"+mensaje + "</b>Encontraste "+this.matches+" de "+this.clues.length+" palabras en el crucigrama.");
-    */
+    
 
     this.addNoneWordAction(target, this.obtenerRetroalimentacion() + "You found words in  "+this.matches+" the "+this.clues.length+" crossword puzzle.");
 }
