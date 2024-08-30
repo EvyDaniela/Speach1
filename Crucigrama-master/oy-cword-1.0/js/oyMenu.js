@@ -543,12 +543,12 @@ oyCrosswordMenu.prototype.checkAll = function(){
 				
 				correct++; 
 				this.matches++;
-                //console.log("encontrada: ", this.clues[i].answer);
-                //pistaCorrespondiente.innerHTML = this.clues[i].answer;
-                //pistaCorrespondiente.className = "bien";
+                console.log("encontrada: ", this.clues[i].answer);
+                pistaCorrespondiente.innerHTML = this.clues[i].answer;
+                pistaCorrespondiente.className = "bien";
 			} else {
-                //console.log("NO encontrada: ", this.clues[i].answer);
-                //pistaCorrespondiente.className = "mal";
+                console.log("NO encontrada: ", this.clues[i].answer);
+                pistaCorrespondiente.className = "mal";
             }
 		} 
 	}
