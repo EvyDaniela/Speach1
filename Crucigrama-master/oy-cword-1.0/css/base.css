@@ -30,7 +30,7 @@
     font-weight: bold;
     color: #FFFFFF; /* Color del texto del título */
     white-space: nowrap; /* Evita el salto de línea en el título */
-    line-height: 60px; /* Alinea el texto verticalmente con el logo */
+    line-height: 20px; /* Alinea el texto verticalmente con el logo */
 }
 
 
