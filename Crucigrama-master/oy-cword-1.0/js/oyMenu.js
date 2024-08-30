@@ -156,8 +156,7 @@ oyCrosswordMenu.prototype.installContextMenu = function(){
 	if (!this.canCheck){
 		this.addNoneWordAction(target, "Deshabilitado Comprobar");
 	} else {
-        //Comprueba una únicamente
-		/*
+        
         var caption = "Comprobar <b>" + (hidx + 1) + "H</b>";
 		if (hidx != -1){
 			if (!this.hlist.clues[hidx].completed()){
@@ -179,7 +178,7 @@ oyCrosswordMenu.prototype.installContextMenu = function(){
 				this.addAction(target, caption, "", null, null);
 			}	
 		}
-		*/
+		
 		
 		var oThis = this;
 		this.addAction(target, "<b>Finalizar</b>", "", "",
