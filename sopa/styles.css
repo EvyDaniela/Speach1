@@ -1,0 +1,277 @@
+body {
+    margin: 0;
+    font-family: "Nunito", Helvetica, Arial, sans-serif;
+}
+
+/* Estilos para el contenedor principal */
+.contenedor {
+    display: flex;
+    flex-direction: row; /* Disposición horizontal */
+    justify-content: space-between;
+    gap: 0; /* Elimina el espacio entre las secciones */
+    max-width: 1000px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* Estilos para las secciones */
+.section1, .section2 {
+    flex: 1;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Solo agrega borde derecho a la sección 1 */
+.section1 {
+    border-right: 1px solid #ddd; /* Borde en el lado derecho */
+}
+
+/* Solo agrega borde izquierdo a la sección 2 */
+.section2 {
+    border-left: 1px solid #ddd; /* Borde en el lado izquierdo */
+}
+
+/* Opcional: Ajustar el border-radius si las secciones están unidas */
+.contenedor > *:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.contenedor > *:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Estilos para el encabezado */
+header.header__barra {
+    display: flex;
+    background-color: #1c4063; /* Azul */
+    height: 50px;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999; /* Asegura que esté sobre el contenido */
+}
+
+header .header__barra__logo {
+    margin-left: 1rem;
+    line-height: 1rem;
+    flex-grow: 0;
+}
+
+header .header__barra__logo img {
+    height: 80px; /* Ajusta la altura máxima según sea necesario */
+    width: auto; /* Mantiene la proporción de la imagen */
+}
+
+header .header__barra__title {
+    text-align: left; 
+    font-family: Arial; 
+    font-size: 30px; 
+    color: white; 
+    text-shadow: 0px 0px 9px #508AD3;
+}
+
+/* Estilos generales del main */
+main {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column; /* Disposición vertical del contenedor principal */
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados opcionales */
+    box-shadow: 0 0 10px rgba(4, 10, 17, 0.2); /* Sombra opcional para dar profundidad */
+    width: 100%;
+}
+
+#sopa {
+    display: grid;
+    grid-template-columns: repeat(15, 30px);
+    grid-gap: 2px;
+    background-color: #ffffff;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 480px;
+    max-height: 480px;
+}
+
+#sopa div {
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease, transform 0.1s ease, border-radius 0.3s ease;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
+
+#sopa div.selected {
+    background-color: #ffeb3b; /* Color amarillo claro para la selección */
+    transform: scale(1.1);
+    border-radius: 50%; /* Bordes redondeados */
+}
+
+#sopa div.found {
+    background-color: #3235cd; /* Color verde para las palabras encontradas */
+    color: #1ad83a;
+    border-radius: 50%; /* Bordes redondeados para las palabras encontradas */
+}
+
+#info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-family: Comic Sans MS;
+    font-weight: bold;
+    font-size: 30px;
+    color: #29ce08;
+    margin: 5; /* Elimina el margen para evitar espacio extra */
+    text-shadow: -1px 0 #95e455, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68, 6px 6px #414D68, 7px 7px #414D68, 8px 8px #414D68, 9px 9px #414D68;
+}
+h3 {
+    font-family: Comic Sans MS;
+    font-weight: bold;
+    font-size: 30px;
+    color: #89ce08;
+    margin: 5; /* Elimina el margen para evitar espacio extra */
+    text-shadow: -1px 0 #414D68, 0 1px #414D68, 1px 0 #414D68, 0 -1px #414D68, -2px 2px 0 #414D68, 2px 2px 0 #414D68, 1px 1px #414D68, 2px 2px #414D68, 3px 3px #414D68, 4px 4px #414D68, 5px 5px #414D68, 6px 6px #414D68, 7px 7px #414D68, 8px 8px #414D68, 9px 9px #414D68;
+}
+
+#palabras {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0;
+    text-align: left;
+}
+
+#palabras-lista {
+    font-size: 12px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#palabras li.found-word {
+    text-decoration: line-through;
+    color: #32cd32;
+}
+
+#score-timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#tiempo {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 15px; /* Hace que el rectángulo parezca un círculo */
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    border: 3px solid rgb(13, 104, 20);
+}
+
+#score-timer h2 {
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+#info button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#info button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo para el panel flotante */
+#mensaje-final {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    display: none; /* Oculto por defecto */
+    z-index: 1000;
+    text-align: center;
+}
+
+#mensaje-final h2 {
+    margin: 10px 0;
+    font-size: 24px; /* Tamaño del título */
+    color: #333;
+}
+
+#mensaje-contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#mensaje-contenido img {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+}
+
+#cerrar-mensaje,
+#seguir-jugando {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#cerrar-mensaje {
+    background-color: #f44336;
+}
+
+#cerrar-mensaje:hover {
+    background-color: #d32f2f;
+}
+
+#seguir-jugando:hover {
+    background-color: #0056b3;
+}
+
+#mensaje-final p {
+    font-size: 18px;
+    color: #333;
+}

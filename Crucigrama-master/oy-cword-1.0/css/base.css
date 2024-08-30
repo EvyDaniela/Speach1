@@ -1,0 +1,276 @@
+/* Barra de navegación */
+.header__barra {
+    background-color: #1c4063; /* Fondo oscuro para la barra */
+    color: #FFFFFF; /* Color del texto en blanco */
+    padding: 10px 20px; /* Espaciado interno */
+    position: fixed; /* Fija la barra en la parte superior */
+    width: 100%; /* Ocupa todo el ancho de la página */
+    top: 0; /* Posiciona en la parte superior */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    display: flex; /* Flexbox para alineación del contenido */
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: space-between; /* Espacio entre el logo y el título */
+}
+
+/* Logo en la barra */
+.header__barra__logo {
+    display: flex; /* Asegura que el logo esté alineado correctamente */
+    align-items: center; /* Centra verticalmente el contenido del logo */
+}
+
+.header__barra__logo img {
+    height: 60px; /* Ajusta el tamaño del logo */
+    width: auto;  /* Mantiene la proporción del logo */
+    margin-right: 20px; /* Margen derecho para separar del título */
+}
+
+/* Título en la barra */
+.header__barra__title {
+    font-size: 1.5em; /* Tamaño de fuente más grande para el título */
+    font-weight: bold;
+    color: #FFFFFF; /* Color del texto del título */
+    white-space: nowrap; /* Evita el salto de línea en el título */
+    line-height: 60px; /* Alinea el texto verticalmente con el logo */
+}
+
+
+/* Asegura que el contenido debajo de la barra no quede oculto */
+body {
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+    padding-top: 60px; /* Ajusta el espacio superior en función de la altura de la barra */
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Contenedor completo */
+#oygContext {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+}
+
+/* Panel */
+.oyPanelDiv {
+    background-color: #F7F7FF;
+    padding: 10px;
+    text-align: left;
+    font-size: 13px;
+    margin: 0 auto; /* Centra el panel horizontalmente */
+}
+
+/* Headers */
+.oyHeader {
+    padding: 12px;
+    color: #FFFFFF;
+    background-color: #CC003D;
+    border-radius: 4px;
+    display: inline-block; /* Permite centrar el header dentro del contenedor */
+}
+.oyHeaderTitle {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 140%;
+    font-weight: bold;
+}
+.oyHeaderDesc {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: normal;
+    font-size: 95%;
+}
+
+/* Footers */
+.oyFooter {
+    background-color: #F7F7FF;
+    padding: 10px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 75%;
+    text-align: center; /* Centra el texto dentro del footer */
+}
+
+/* Lists */
+.oyListNormal {
+    padding: 6px;
+    color: #737573;
+}
+.oyListNormal:hover {
+    color: #050505;
+    background-color: #f8ffc6;
+}
+.oyListSel {
+    padding: 6px;
+    color: #000000;
+    background-color: #E0E0E0;
+}
+
+/* Links */
+a.oysTextLink {
+    color: #4282B5;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a.oysTextLink:hover {
+    color: #808080;
+    text-decoration: underline;
+}
+
+/* Menu Actions */
+.oyMenuAction {
+    padding: 10px;
+    color: #000000;
+    background-color: #dae5ff;
+    font-size: medium;
+    border: solid 1px #b5b5b5;
+    border-radius: 6px;
+    box-shadow: rgba(0,0,0,0.3) 3px 3px 6px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Añade transición para color */
+    text-align: center;
+    flex: 1; /* Asegura que ambos elementos tengan el mismo tamaño */
+    margin: 0 10px; /* Añade un margen entre los botones */
+    text-decoration: none; /* Elimina subrayado del texto */
+}
+
+.oyMenuAction:hover {
+    background-color: #85cc85; /* Color verde suave al pasar el cursor */
+    border: solid 1px #808080;
+    color: #FFFFFF; /* Cambia el color del texto al pasar el cursor */
+}
+
+/* Estado activo (cuando se pulsa) */
+.oyMenuAction:active {
+    background-color: #6baf6b; /* Un verde más oscuro al hacer clic */
+    color: #FFFFFF; /* Asegura que el texto sigue siendo legible */
+}
+
+
+
+/* Grid and Lists */
+#datos {
+    max-width: 100%;
+    text-align: center; /* Centra el contenido de datos */
+    display: inline-block;
+}
+.oyListCell {
+    background-color: #F7F7FF;
+    color: #333333;
+    padding: 8px;
+    border-radius: 4px;
+    box-shadow: rgba(0,0,0,0.1) 2px 2px 4px;
+    margin: 4px 0;
+    display: inline-block; /* Permite que las celdas de lista se alineen horizontalmente */
+}
+.oyListSpacer {
+    background-color: #E0E0E0;
+    height: 1px;
+}
+
+/* Cells */
+.oyCellInput, .oyCellEmpty, .oyCellFull, .oyCellRevealed, .oyCellGuessed, .oyCellFocused, .oyCellActive {
+    font-size: 14px;
+    font-family: Courier New, monospace;
+    font-weight: bold;
+    text-align: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    display: inline-block; /* Permite que las celdas se alineen en una cuadrícula */
+}
+.oyCellInput {
+    border: none;
+    background-color: transparent;
+}
+.oyCellEmpty {
+    background-color: #F7F7FF;
+}
+.oyCellFull {
+    border: solid 1px #003366;
+    background-color: #FFFFFF;
+}
+.oyCellRevealed {
+    border: solid 1px #003366;
+    background-color: #FFC0C0;
+}
+.oyCellGuessed {
+    border: solid 1px #003366;
+    background-color: #C0FFC0;
+}
+.oyCellFocused {
+    border: solid 1px #003366;
+    background-color: #FFFFBB;
+}
+.oyCellActive {
+    border: solid 1px #003366;
+    background-color: #6699FF;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 900px) {
+    #oygContext {
+        flex-direction: column;
+        align-items: center; /* Centra el contenido en pantallas más pequeñas */
+    }
+}
+
+@media screen and (max-width: 515px) {
+    #oygListH, #oygListV {
+        width: 100%;
+        float: none;
+    }
+}
+
+/* Retroalimentación */
+#retroalimentacion {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 0.9em;
+    color: #23314e;
+    text-align: center;
+    margin: 10px auto; /* Centra el retroalimentación */
+}
+
+/* Footer Frame */
+.oyOuterFrame {
+    padding: 16px;
+    background-color: #FFFFFF;
+    border: 0px solid #EAEAEA;
+    border-radius: 10px;
+    margin: 30px auto 0; /* Centra el marco del footer */
+    box-shadow: rgba(0,0,0,0.1) 0px 4px 8px;
+    max-width: 800px; /* Limita el ancho máximo */
+}
+/* Estilo para el mensaje flotante */
+.ousStateError {
+    position: fixed; /* Fija el mensaje en la pantalla */
+    bottom: 20px; /* Posición desde la parte inferior */
+    left: 50%; /* Posición desde la izquierda */
+    transform: translateX(-50%); /* Centra el mensaje horizontalmente */
+    background-color: #f44336; /* Color de fondo rojo para resaltar el error */
+    color: #fff; /* Color de texto blanco */
+    padding: 15px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    display: none; /* Oculto por defecto */
+}
+
+/* Animación para que aparezca suavemente */
+.ousStateError.show {
+    display: block;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s; /* Animación de aparición y desaparición */
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 20px; opacity: 1;}
+}
+
+@keyframes fadeout {
+    from {bottom: 20px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Crucigrama</title>
+    <link rel="stylesheet" href="./oy-cword-1.0/css/base.css" type="text/css">
+</head>
+<header class="header__barra">
+    <div class="header__barra__logo">
+        <img src="oy-cword-1.0/img/carrera.png" alt="Logo" />
+    </div>
+    <div class="header__barra__title">
+        Technology Word Search
+    </div>
+</header>
+
+<body>
+    <div class="instrucciones">
+        <b></b> Click on “Start” and read the sentences, write the answer correctly. When you finish, click the “Finish” button.
+    </div>
+
+    <!-- Contenedor completo -->
+    <div id="oygContext">
+        <div id="datos">
+            <div class="oyListCell" id="oygListH"></div>
+            <div class="oyListCell" id="oygListV"></div>
+        </div>
+
+        <div class="oyFrame">
+            <table class="oyFrame" style="display: none;">
+                <tr class="oyHeader">
+                    <td class="oyHeader">
+                        <div id="oygHeader"></div>
+                    </td>
+                    <td>
+                        <div id="oygHeaderMenu"></div>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="oyPuzzleCell">
+                <div class="oyPuzzle" id="oygPuzzle"></div>
+                <div class="oyPuzzleFooter" id="oygPuzzleFooter"></div>
+                <div id="oygState"></div>
+            </div>
+        </div>
+
+        <div id="oygStatic" style="display: none;"></div>
+        <div id="oygFooter" style="display: none;"></div>
+    </div>
+
+    <!-- Archivos JavaScript. Conservar orden -->
+    <script type="text/javascript" src="./oy-cword-1.0/js/oyPrologue.js"></script>
+    <script type="text/javascript" src="./oy-cword-1.0/js/oyJsrAjax.js"></script>
+    <script type="text/javascript" src="./oy-cword-1.0/js/oyClue.js"></script>
+    <script type="text/javascript" src="./oy-cword-1.0/js/oyMenu.js"></script>
+    <script type="text/javascript" src="./oy-cword-1.0/js/oyPuzzle.js"></script>
+    <script type="text/javascript" src="./oy-cword-1.0/js/oyServer.js"></script>
+    <script type="text/javascript" src="./oy-cword-1.0/js/oySign.js"></script>
+    <script type="text/javascript" src="./oy-cword-1.0/js/oyMisc.js"></script>
+    <!-- Código adicional -->
+    <script type="text/javascript" src="js/codigoCrucigrama.js"></script>
+    <!-- Instanciar el crucigrama y enlazarlo con la plantilla HTML arriba y mostrarlo al usuario -->
+    <script type="text/javascript" src="./oy-cword-1.0/js/oyEpilogue.js"></script>
+
+</body>
+</html>
