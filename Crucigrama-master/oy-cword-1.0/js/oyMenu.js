@@ -157,7 +157,7 @@ oyCrosswordMenu.prototype.installContextMenu = function(){
 		this.addNoneWordAction(target, "Deshabilitado Comprobar");
 	} else {
         
-        var caption = "Comprobar <b>" + (hidx + 1) + "H</b>";
+        var caption = "Check it <b>" + (hidx + 1) + "H</b>";
 		if (hidx != -1){
 			if (!this.hlist.clues[hidx].completed()){
 				this.addCheckWordAction(
@@ -168,7 +168,7 @@ oyCrosswordMenu.prototype.installContextMenu = function(){
 			}
 		}
 		
-		var caption = "Comprobar <b>" + (vidx + 1) + "V</b>";
+		var caption = "Check it <b>" + (vidx + 1) + "V</b>";
 		if (vidx != -1){
 			if (!this.vlist.clues[vidx].completed()){	 
 				this.addCheckWordAction(
