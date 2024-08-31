@@ -181,7 +181,7 @@ oyCrosswordMenu.prototype.installContextMenu = function(){
 		
 		
 		var oThis = this;
-		this.addAction(target, "<b>Finalizar</b>", "", "",
+		this.addAction(target, "<b>Finish</b>", "", "",
 			function(){				
 				oThis.checkAll(); 
 				oThis.invalidateMenu();		
@@ -224,9 +224,9 @@ oyCrosswordMenu.prototype.installDoneMenu = function(){
 	target.innerHTML = "";
 
    
-	this.addNoneWordAction(target, "Juego Terminado!");	 
+	this.addNoneWordAction(target, "Game Over!");	 
 	this.addNewLine(target);
-	var msg = "Tienes <b>" + this.score + "</b> puntos";
+	var msg = "Have <b>" + this.score + "</b> puntos";
 	if (this.rank != -1){
 		msg += " (rank <b>" +  this.rank + "</b>)";
 	}  
@@ -273,7 +273,7 @@ oyCrosswordMenu.prototype.addSubmitLeaveMenuItems = function(target){
 	
 	var oThis = this;
 
-	this.addAction(target, "Reiniciar", "", "--",
+	this.addAction(target, "Reset", "", "--",
 		function(){			
 			oThis.leaveGameEarly(oThis.puzz.leaveGameURL);
 			oThis.footer.stateOk("<span style='display:none;'>Hecho</span>");
