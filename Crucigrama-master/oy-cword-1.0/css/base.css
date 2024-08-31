@@ -29,7 +29,7 @@
     font-size: 1.5em; /* Tamaño de fuente más grande para el título */
     font-weight: bold;
     color: #FFFFFF; /* Color del texto del título */
-    white-space: nowrap; /* Evita el salto de línea en el título */
+    white-space: pre; /* Evita el salto de línea en el título */
     line-height: 0px; /* Alinea el texto verticalmente con el logo */
 }
 
