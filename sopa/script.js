@@ -221,4 +221,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const content = document.getElementById('toc-content1');
         content.style.display = content.style.display === 'block' ? 'none' : 'block';
     });
+
+    
 });
