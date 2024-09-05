@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles.css">
+    <title>Game Quiz</title>
+</head>
+<body>
+    <div class="container">
+        <img src="img/quiz1.png" alt="" class="img">
+        <header>
+            <div class="puntaje">
+                <img src="image/regalo.png" alt="">
+                <span class="puntos" id="puntos">0</span>
+            </div>
+            <h1>QUIZ</h1>
+            <div class="jugador">
+                <span class="nombre" id="nombre">Invitado</span>
+                <img src="image/user.png" alt="">
+            </div>
+        </header>
+
+        <!-- SECCIÓN MENU DEL JUEGO -->
+        <main class="menu">
+            <h2>Hello <span id="nombre-jugador"> </span></h2>
+            <p>Choose a category.</p>
+            <div class="categorias">
+                <div class="categoria" id="quiz1">
+                    <img src="image/quiz1.jpg" alt="" class="foto-categoria">
+                    <h3>Information Technology</h3>
+                </div>
+                <div class="categoria" id="quiz2">
+                    <img src="image/quiz2.jpg" alt="" class="foto-categoria">
+                    <h3>Cybersecurity </h3>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/menu.js"></script>
+</body>
+</html>

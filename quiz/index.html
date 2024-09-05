@@ -1,54 +1,35 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Estilo Quizizz</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Styles.css">
+    <title>Game Quiz</title>
 </head>
 <body>
-    <div class="quiz-container">
+    <div class="container">
+        <img src="img/quiz.png" alt="" class="img">
         <header>
-            <h1>Quiz Estilo Quizizz</h1>
-            <div class="timer">Tiempo: <span id="timer">30</span>s</div>
+            <div class="puntaje">
+                <img src="image/regalo.png" alt="">
+                <span class="puntos">0</span>
+            </div>
+            <h1>QUIZ</h1>
+            <div class="jugador">
+                <span class="nombre">-</span>
+                <img src="image/user.png" alt="">
+            </div>
         </header>
 
-        <div id="name-container">
-            <label for="player-name">Nombre del Jugador:</label>
-            <input type="text" id="player-name" placeholder="Ingresa tu nombre">
-            <button id="start-quiz">Iniciar Quiz</button>
-        </div>
-        
-        <div class="question-container" id="question-container" style="display: none;">
-            <h2>¿Qué es el código máquina?</h2>
-            <div class="options-container">
-                <div class="option" data-answer="incorrect">
-                    <p>a) Un lenguaje de programación de alto nivel</p>
-                </div>
-                <div class="option" data-answer="correct">
-                    <p>b) Código nativo de la computadora que se entiende sin traducción</p>
-                </div>
-                <div class="option" data-answer="incorrect">
-                    <p>c) Un tipo de cifrado</p>
-                </div>
-                <div class="option" data-answer="incorrect">
-                    <p>d) Una guía de estilo de codificación</p>
-                </div>
-            </div>
-        </div>
-        
-        <footer style="display: none;" id="quiz-footer">
-            <button id="next-button">Siguiente Pregunta</button>
-        </footer>
+        <!-- PANTALLA DE BIENVENIDA -->
+        <main class="inicio">
+            <h2>Welcome !</h2>
+            <p>Enter your name to play</p>
+            <input type="text" id="nombre">
+            <button class="btn" id="comenzar">Star</button>
+        </main>
     </div>
 
-    <div class="scoreboard-container" id="scoreboard-container">
-        <h2>Tabla de Puntajes</h2>
-        <ol id="scoreboard">
-            <!-- Puntajes se agregan dinámicamente -->
-        </ol>
-    </div>
-
-    <script src="script.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>

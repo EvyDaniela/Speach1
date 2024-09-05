@@ -3,18 +3,16 @@ body {
     font-family: "Nunito", Helvetica, Arial, sans-serif;
 }
 
-/* Estilos para el contenedor principal */
 .contenedor {
     display: flex;
-    flex-direction: row; /* Disposición horizontal */
+    flex-direction: row; 
     justify-content: space-between;
-    gap: 0; /* Elimina el espacio entre las secciones */
+    gap: 0; 
     max-width: 1000px;
     padding: 30px;
     box-sizing: border-box;
 }
 
-/* Estilos para las secciones */
 .section1, .section2 {
     flex: 1;
     padding: 20px;
@@ -24,7 +22,6 @@ body {
     position: relative;
 }
 
-/* Solo agrega borde derecho a la sección 1 */
 .section1 {
     border-right: 1px solid #ddd; /* Borde en el lado derecho */
 }
@@ -45,7 +42,6 @@ body {
     border-bottom-right-radius: 10px;
 }
 
-/* Estilos para el encabezado */
 header.header__barra {
     display: flex;
     background-color: #1c4063; /* Azul */
