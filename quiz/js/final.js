@@ -5,6 +5,7 @@ const puntajeFinal = document.querySelector("#puntaje-final");
 const totalAcertadas = document.querySelector("#total-acertadas");
 const totalNoAcertadas = document.querySelector("#total-no-acertadas");
 const btnComenar = document.querySelector("#btn-comenzar")
+const btnSalir = document.querySelector("#btn-salir")
 
 nombre.innerHTML = localStorage.getItem("nombre");
 nombreJugador.innerHTML = localStorage.getItem("nombre");
@@ -18,4 +19,7 @@ totalNoAcertadas.innerHTML = incorrectas;
 
 btnComenar.addEventListener("click", () => {
     location.href = "index.html";
+});
+btnSalir.addEventListener("click", () => {
+    location.href = "Speach/index.html";
 });
