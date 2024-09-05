@@ -212,4 +212,13 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("mensaje-final").style.display = "none";
         document.getElementById("comenzar").style.display = "block"; // Volver a mostrar botón comenzar
     });
+    document.getElementById('toc-button').addEventListener('click', function() {
+        const tocContent = document.getElementById('toc-content');
+        tocContent.style.display = tocContent.style.display === 'none' || tocContent.style.display === '' ? 'block' : 'none';
+    });
+    document.querySelector('.floating-button-link').addEventListener('click', function(event) {
+        event.preventDefault(); // Evita que el enlace realice la acción predeterminada
+        const content = document.getElementById('toc-content1');
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    });
 });
