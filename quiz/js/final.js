@@ -21,5 +21,5 @@ btnComenar.addEventListener("click", () => {
     location.href = "index.html";
 });
 btnSalir.addEventListener("click", () => {
-    location.href = "Speach/index.html";
+    location.href = "index.html";
 });
